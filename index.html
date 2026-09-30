@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRIP | Tienda Oficial de Indumentaria Automotriz & Streetwear</title>
+    <meta name="description" content="Prendas de alta calidad para fanáticos del motor y la cultura automotriz. Remeras boxy fit heavyweight 280 GSM de Porsche, Corvette, BMW E30, NSX, Colapinto, Ford y Senna.">
+    <meta property="og:title" content="GRIP | Tienda Oficial de Indumentaria Automotriz">
+    <meta property="og:description" content="Moda urbana y automotriz. Confección premium con estampas DTF de alta definición.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ANNOUNCEMENT TICKER -->
+    <aside class="announcement-ticker" aria-label="Anuncios de GRIP">
+        <div class="ticker-track">
+            <span class="ticker-item">ENVÍO GRATIS A TODO EL PAÍS EN COMPRAS SUPERIORES A $80.000 <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">DROP AUTOMOTRIZ 2026 DISPONIBLE ONLINE <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">100% ALGODÓN HEAVYWEIGHT 280 GSM CON CORTE BOXY FIT <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">PEDIDOS DIRECTOS Y COORDINACIÓN POR WHATSAPP <span class="ticker-dot">•</span></span>
+            <!-- Duplicado para loop infinito fluido -->
+            <span class="ticker-item">ENVÍO GRATIS A TODO EL PAÍS EN COMPRAS SUPERIORES A $80.000 <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">DROP AUTOMOTRIZ 2026 DISPONIBLE ONLINE <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">100% ALGODÓN HEAVYWEIGHT 280 GSM CON CORTE BOXY FIT <span class="ticker-dot">•</span></span>
+            <span class="ticker-item">PEDIDOS DIRECTOS Y COORDINACIÓN POR WHATSAPP <span class="ticker-dot">•</span></span>
+        </div>
+    </aside>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container header-container">
+            <!-- Brand Logo Left -->
+            <a href="#inicio" class="header-logo-link" id="logoHome" aria-label="GRIP Inicio">
+                <img src="assets/logo/logo-white.png" alt="GRIP" class="header-logo-img">
+            </a>
+
+            <!-- Navigation Center -->
+            <nav class="nav-desktop" aria-label="Navegación principal">
+                <a href="#inicio" class="nav-link active" data-nav="home">Inicio</a>
+                <a href="#catalogo" class="nav-link" data-nav="catalog">Catálogo</a>
+                <a href="#porsche" class="nav-link" data-filter="porsche">Porsche</a>
+                <a href="#bmw" class="nav-link" data-filter="bmw">BMW E30</a>
+                <a href="#colapinto" class="nav-link" data-filter="colapinto">Colapinto #43</a>
+                <a href="#guia-talles" class="nav-link" id="btnNavSizeGuide">Guía de Talles</a>
+            </nav>
+
+            <!-- Actions Right -->
+            <div class="header-actions">
+                <!-- Cart Button with Live Counter Badge -->
+                <button class="cart-trigger-btn" id="btnOpenCart" aria-label="Abrir carrito de compras">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-counter-badge" id="cartCountBadge">0</span>
+                </button>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="mobile-toggle" id="btnMobileToggle" aria-label="Abrir menú de navegación">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION DRAWER -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="mobile-drawer-header">
+            <img src="assets/logo/logo-white.png" alt="GRIP" class="mobile-logo-img">
+            <button class="drawer-close-btn" id="btnCloseMobileDrawer" aria-label="Cerrar menú">&times;</button>
+        </div>
+        <nav class="mobile-drawer-nav">
+            <a href="#inicio" class="mobile-nav-link" data-nav="home">Inicio</a>
+            <a href="#catalogo" class="mobile-nav-link" data-nav="catalog">Catálogo Completo</a>
+            <a href="#porsche" class="mobile-nav-link" data-filter="porsche">Colección Porsche</a>
+            <a href="#bmw" class="mobile-nav-link" data-filter="bmw">Colección BMW E30</a>
+            <a href="#colapinto" class="mobile-nav-link" data-filter="colapinto">Franco Colapinto #43</a>
+            <a href="#guia-talles" class="mobile-nav-link" id="btnMobileSizeGuide">Guía de Talles</a>
+        </nav>
+        <div class="mobile-drawer-footer">
+            <p class="mobile-footer-text">Consultas y atención personalizada:</p>
+            <a href="https://wa.me/5493415998943" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-simple">
+                WhatsApp: +54 9 341 599-8943
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN VIEWS WRAPPER -->
+    <main class="main-content" id="mainContent">
+
+        <!-- VIEW 1: HOME & CATALOG VIEW -->
+        <section class="view-section active" id="homeView">
+            <!-- HERO BANNER -->
+            <div class="hero-banner">
+                <div class="container hero-container">
+                    <!-- Brand Logo Showcase Front and Center -->
+                    <div class="hero-brand-showcase">
+                        <img src="assets/logo/logo-white.png" alt="GRIP" class="hero-main-logo">
+                    </div>
+                    <span class="hero-eyebrow">CULTURA AUTOMOTRIZ & STREETWEAR</span>
+                    <h1 class="hero-title">WEAR YOUR PASSION. DRIVE THE CULTURE.</h1>
+                    <p class="hero-subtitle">
+                        Remeras gráficas de edición limitada confeccionadas en jersey pesado 280 GSM con corte boxy fit estructurado.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#catalogo" class="btn btn-primary" id="heroBtnCatalog">EXPLORAR CATÁLOGO</a>
+                        <a href="https://wa.me/5493415998943" target="_blank" rel="noopener noreferrer" class="btn btn-outline">CONTACTAR A GRIP</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VALUE PROPOSITION BAR -->
+            <div class="perks-strip">
+                <div class="container perks-container">
+                    <div class="perk-item">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                        <div>
+                            <strong>ENVÍO GRATIS</strong>
+                            <span>En pedidos desde $80.000 a todo el país</span>
+                        </div>
+                    </div>
+                    <div class="perk-item">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a16 16 0 0 0 10.94 13.06l.2.06.2-.06a16 16 0 0 0 10.94-13.06l.58-3.47a2 2 0 0 0-1.34-2.23z"></path>
+                        </svg>
+                        <div>
+                            <strong>ALGODÓN 280 GSM</strong>
+                            <span>Tejido pesado heavyweight & corte boxy fit</span>
+                        </div>
+                    </div>
+                    <div class="perk-item">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                        <div>
+                            <strong>PEDIDO DIRECTO</strong>
+                            <span>Confirmá tu pedido al instante por WhatsApp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATALOG SECTION -->
+            <section class="catalog-section" id="catalogo">
+                <div class="container">
+                    <div class="section-header">
+                        <div>
+                            <span class="section-tag">COLECCIÓN OFICIAL</span>
+                            <h2 class="section-title">REMERAS DE AUTOS</h2>
+                        </div>
+                        <p class="section-count" id="catalogProductCount">7 Productos</p>
+                    </div>
+
+                    <!-- Filter pills -->
+                    <div class="catalog-filters">
+                        <button class="filter-pill active" data-filter-tag="all">Todos</button>
+                        <button class="filter-pill" data-filter-tag="porsche">Porsche</button>
+                        <button class="filter-pill" data-filter-tag="corvette">Corvette</button>
+                        <button class="filter-pill" data-filter-tag="bmw">BMW E30</button>
+                        <button class="filter-pill" data-filter-tag="nsx">Acura NSX</button>
+                        <button class="filter-pill" data-filter-tag="colapinto">Colapinto #43</button>
+                        <button class="filter-pill" data-filter-tag="ford">Ford Falcon</button>
+                        <button class="filter-pill" data-filter-tag="senna">Senna #12</button>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- VIEW 2: INDIVIDUAL PRODUCT PAGE (CAR GALLERY STYLE) -->
+        <section class="view-section" id="productView">
+            <div class="container product-page-container">
+                <!-- Breadcrumbs & Back button -->
+                <div class="product-breadcrumbs">
+                    <button class="btn-back-catalog" id="btnBackToCatalog">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        <span>Volver al Catálogo</span>
+                    </button>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current" id="productBreadcrumbTitle">Producto</span>
+                </div>
+
+                <!-- Product Detail Layout: Left = Gallery, Right = Info & Purchase -->
+                <div class="product-detail-layout">
+                    <!-- LEFT COLUMN: IMAGE GALLERY -->
+                    <div class="product-gallery">
+                        <div class="gallery-main-wrapper">
+                            <img id="detailMainImg" class="gallery-main-img" src="" alt="Producto GRIP">
+                            <span class="gallery-badge" id="detailBadge" style="display: none;"></span>
+                        </div>
+                        <!-- Thumbnails Row -->
+                        <div class="gallery-thumbnails" id="detailThumbnailsRow">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: PRODUCT INFO & ORDER -->
+                    <div class="product-info-panel">
+                        <div class="product-brand-tag">GRIP APPAREL</div>
+                        <h1 class="product-page-title" id="detailTitle">Nombre de la Prenda</h1>
+                        
+                        <div class="product-price-wrapper">
+                            <span class="product-current-price" id="detailPrice">$0</span>
+                            <span class="product-old-price" id="detailOriginalPrice" style="display: none;">$0</span>
+                        </div>
+
+                        <!-- Free shipping notice pill -->
+                        <div class="shipping-perk-pill">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 14 14"></polyline>
+                            </svg>
+                            <span>Envío gratis superando los <strong>$80.000</strong> a todo el país</span>
+                        </div>
+
+                        <!-- SIZE SELECTOR -->
+                        <div class="selector-block" id="sizeSelectorBlock">
+                            <div class="selector-header">
+                                <span class="selector-label">TALLE:</span>
+                                <span class="selected-value-text" id="selectedSizeText">Seleccioná un talle</span>
+                                <button class="btn-text-action" id="btnOpenSizeGuideInline">Ver medidas</button>
+                            </div>
+                            <div class="sizes-options-grid" id="detailSizesGrid">
+                                <button type="button" class="size-btn" data-size="S">S</button>
+                                <button type="button" class="size-btn" data-size="M">M</button>
+                                <button type="button" class="size-btn" data-size="L">L</button>
+                                <button type="button" class="size-btn" data-size="XL">XL</button>
+                            </div>
+                            <!-- Validation warning message -->
+                            <div class="size-error-msg" id="sizeWarningMsg" style="display: none;">
+                                Por favor seleccioná un talle para continuar.
+                            </div>
+                        </div>
+
+                        <!-- QUANTITY SELECTOR -->
+                        <div class="selector-block">
+                            <div class="selector-header">
+                                <span class="selector-label">CANTIDAD:</span>
+                            </div>
+                            <div class="qty-stepper">
+                                <button type="button" class="stepper-btn" id="btnQtyMinus" aria-label="Disminuir cantidad">−</button>
+                                <span class="stepper-value" id="detailQtyValue">1</span>
+                                <button type="button" class="stepper-btn" id="btnQtyPlus" aria-label="Aumentar cantidad">+</button>
+                            </div>
+                        </div>
+
+                        <!-- ADD TO CART MAIN CTA -->
+                        <button type="button" class="btn btn-add-cart" id="btnAddToCart">
+                            <span>AGREGAR AL CARRITO</span>
+                        </button>
+
+                        <!-- PRODUCT INFORMATION ACCORDIONS -->
+                        <div class="product-accordions">
+                            <div class="accordion-item active">
+                                <button class="accordion-trigger" type="button">
+                                    <span>DESCRIPCIÓN Y DISEÑO</span>
+                                    <span class="accordion-icon">−</span>
+                                </button>
+                                <div class="accordion-panel" id="detailDescriptionPanel">
+                                    <p id="detailDescriptionText"></p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item active">
+                                <button class="accordion-trigger" type="button">
+                                    <span>ESPECIFICACIONES DE LA PRENDA</span>
+                                    <span class="accordion-icon">−</span>
+                                </button>
+                                <div class="accordion-panel">
+                                    <ul class="specs-list" id="detailSpecsList">
+                                        <!-- Populated dynamically -->
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <button class="accordion-trigger" type="button">
+                                    <span>ENVÍOS & PEDIDOS POR WHATSAPP</span>
+                                    <span class="accordion-icon">+</span>
+                                </button>
+                                <div class="accordion-panel">
+                                    <p>• <strong>Envío Gratis:</strong> En todos los carritos a partir de $80.000.</p>
+                                    <p>• <strong>Envío a Organizar:</strong> Para pedidos menores a $80.000 coordinamos la opción más económica y conveniente según tu zona.</p>
+                                    <p>• <strong>Pago y Coordinación:</strong> Directo con el equipo de GRIP a través de WhatsApp una vez enviado tu pedido.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CART SIDE DRAWER -->
+    <div class="cart-drawer-backdrop" id="cartBackdrop"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+        <!-- Drawer Header -->
+        <div class="cart-drawer-header">
+            <div class="cart-header-title">
+                <h3>TU CARRITO</h3>
+                <span class="cart-header-count" id="drawerCartCount">(0)</span>
+            </div>
+            <button class="drawer-close-btn" id="btnCloseCartDrawer" aria-label="Cerrar carrito">&times;</button>
+        </div>
+
+        <!-- Free Shipping Progress Tracker -->
+        <div class="free-shipping-tracker" id="freeShippingTracker">
+            <div class="tracker-message" id="shippingTrackerMsg">
+                Cargando estado de envío...
+            </div>
+            <div class="tracker-bar-bg">
+                <div class="tracker-bar-fill" id="shippingTrackerBar" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <!-- Drawer Body: Cart Items or Empty State -->
+        <div class="cart-drawer-body">
+            <!-- Empty state -->
+            <div class="cart-empty-state" id="cartEmptyState" style="display: none;">
+                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <h4 class="cart-empty-title">TU CARRITO ESTÁ VACÍO</h4>
+                <p class="cart-empty-desc">Explorá nuestros productos y encontrá tu próximo diseño.</p>
+                <button type="button" class="btn btn-secondary btn-sm" id="btnEmptyCartViewProducts">VER PRODUCTOS</button>
+            </div>
+
+            <!-- Items list -->
+            <div class="cart-items-list" id="cartItemsList">
+                <!-- Dynamically populated items -->
+            </div>
+        </div>
+
+        <!-- Drawer Footer: Subtotal, Shipping, Total and WHATSAPP BUTTON -->
+        <div class="cart-drawer-footer" id="cartDrawerFooter">
+            <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <span id="cartDrawerSubtotal">$0</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Envío</span>
+                <span id="cartDrawerShippingStatus" class="shipping-status-tag">A organizar</span>
+            </div>
+            <div class="cart-summary-line total-line">
+                <span>Total</span>
+                <span id="cartDrawerTotal">$0</span>
+            </div>
+
+            <!-- EXCLUSIVE FINAL BUTTON: WHATSAPP ONLY -->
+            <a href="#" class="btn btn-whatsapp-checkout" id="btnWhatsAppCheckout" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.78 14.07c-.24.68-1.4 1.26-1.92 1.34-.51.08-1.18.12-3.41-.81-2.86-1.19-4.7-4.1-4.84-4.29-.14-.19-1.17-1.55-1.17-2.96s.74-2.1 1.01-2.39c.27-.29.58-.36.78-.36.2 0 .39.01.56.02.18.01.42-.07.65.49.24.57.82 2 .89 2.15.07.15.12.33.02.53-.1.2-.15.33-.3.51-.15.17-.32.39-.46.52-.15.15-.31.31-.13.62.18.31.8 1.32 1.72 2.13 1.18 1.05 2.17 1.38 2.48 1.53.31.15.49.13.67-.08.19-.21.78-.91.99-1.22.21-.31.42-.26.71-.15.29.1 1.83.86 2.15 1.02.31.16.52.24.6.37.08.14.08.79-.16 1.47z"/>
+                </svg>
+                <span>CONTINUAR PEDIDO POR WHATSAPP</span>
+            </a>
+            <p class="whatsapp-helper-text">Te atenderemos directamente para coordinar el pago y la entrega.</p>
+        </div>
+    </aside>
+
+    <!-- SIZE GUIDE MODAL -->
+    <div class="modal-backdrop" id="sizeGuideModal">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3>GUÍA DE TALLES GRIP</h3>
+                <button class="drawer-close-btn" id="btnCloseSizeGuideModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 0.9rem;">
+                    Nuestras remeras cuentan con corte <strong>Boxy Fit Heavyweight</strong>. Para un calce holgado tradicional elegí tu talle habitual. Para un look extra oversize, elegí un talle más.
+                </p>
+                <div class="size-table-wrapper">
+                    <table class="size-guide-table">
+                        <thead>
+                            <tr>
+                                <th>Talle</th>
+                                <th>Ancho Pecho (cm)</th>
+                                <th>Largo Total (cm)</th>
+                                <th>Manga (cm)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>S</strong></td>
+                                <td>54 cm</td>
+                                <td>68 cm</td>
+                                <td>21 cm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>M</strong></td>
+                                <td>56 cm</td>
+                                <td>71 cm</td>
+                                <td>22 cm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>L</strong></td>
+                                <td>59 cm</td>
+                                <td>74 cm</td>
+                                <td>23 cm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>XL</strong></td>
+                                <td>62 cm</td>
+                                <td>77 cm</td>
+                                <td>24 cm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <img src="assets/logo/logo-white.png" alt="GRIP" class="footer-logo-img">
+                <p class="footer-bio">
+                    Indumentaria automotriz de alta gama diseñada y confeccionada en Argentina. Streetwear inspirado en los íconos de la pista y la calle.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title">NAVEGACIÓN</h4>
+                <ul class="footer-links">
+                    <li><a href="#inicio" data-nav="home">Inicio</a></li>
+                    <li><a href="#catalogo" data-nav="catalog">Catálogo Completo</a></li>
+                    <li><a href="#porsche" data-filter="porsche">Porsche GT3 RS</a></li>
+                    <li><a href="#bmw" data-filter="bmw">BMW M3 E30</a></li>
+                    <li><a href="#colapinto" data-filter="colapinto">Franco Colapinto #43</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title">ATENCIÓN & ENVÍOS</h4>
+                <ul class="footer-links">
+                    <li><span>• Envío Gratis desde $80.000</span></li>
+                    <li><span>• Envíos a todo el país</span></li>
+                    <li><span>• Atención directa por WhatsApp</span></li>
+                    <li><a href="https://wa.me/5493415998943" target="_blank" rel="noopener noreferrer">WhatsApp: +54 9 341 599-8943</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 GRIP. Todos los derechos reservados.</p>
+                <p class="footer-credits">Automotive Apparel & Streetwear</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
